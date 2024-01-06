@@ -1,0 +1,1 @@
+print('\n'.join(['Coding is my favorite hobby!']*int(input())))
