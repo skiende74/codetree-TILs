@@ -12,19 +12,18 @@ for _ in range(M):
     A[j].append(i)
 
 # dfs
+count = 0
 def dfs(i):
+    global count
     for j in A[i]:
         if not visited[j]:
             visited[j] = True
+            count += 1
             dfs(j)
 
 
 # 본문
 visited = [False]*(N+1)
-count = 0
-for i in range(1, N+1):
-    if not visited[i]:
-        visited[i] = True
-        count += 1
-        dfs(i)
+visited[1] = True
+dfs(1)
 print(count)
