@@ -20,6 +20,7 @@ def solve():
             
             if repeat_count == M:
                 happy_count += 1
+                break
 
     for j in range(N):
         repeat_count = 1
@@ -33,6 +34,7 @@ def solve():
             
             if repeat_count == M:
                 happy_count += 1
+                break
 
     print(happy_count)
 solve()
