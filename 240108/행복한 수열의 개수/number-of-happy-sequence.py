@@ -4,9 +4,7 @@ grid = [list(map(int, input().split())) for _ in range(N)]
 
 # 본문
 def solve():
-    if M == 1:
-        print(2*N)
-        return
+    
     happy_count = 0
     for i in range(N):
         repeat_count = 1
