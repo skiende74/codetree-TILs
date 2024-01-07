@@ -1,4 +1,6 @@
+import sys
 # 입력
+input = sys.stdin.readline
 N, M = map(int, input().split())
 grid = [list(map(int, input().split())) for _ in range(N)]
 
@@ -10,8 +12,7 @@ def count_block1(i,j):
 def count_block2(i,j):
     max_val = -1
     for ii in range(i, i+3):
-        row = sum(grid[ii][j:j+3])
-        max_val = max(max_val, row)
+        max_val = max(max_val, sum(grid[ii][j:j+3]))
     
     for jj in range(j, j+3):
         col = 0
