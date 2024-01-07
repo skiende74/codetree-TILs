@@ -23,7 +23,7 @@ def can_move(i, j):
 
 # 본문
 safe_region_max = 0
-K_max = 0
+K_max = 1
 for K in range(1, 100+1):
 
     safe_region_count = 0
