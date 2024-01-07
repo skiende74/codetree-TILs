@@ -9,7 +9,7 @@ for _ in range(N):
 result = False
 visited = [[False]*M for _ in range(N)]
 def dfs(i, j):
-    global order, result
+    global result
 
     dis, djs = [0,1],[1,0]
 
@@ -17,10 +17,12 @@ def dfs(i, j):
         i2, j2 = i + di, j + dj
 
         if can_go(i2, j2):
-            visited[i2][j2] = True
             if (i2,j2) == (N-1, M-1):
                 result = True
+                return
+            visited[i2][j2] = True
             dfs(i2,j2)
+
 def can_go(i,j):
     in_range = 0<=i<N and 0<=j<N
     
