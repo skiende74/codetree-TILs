@@ -9,7 +9,7 @@ for _ in range(N):
 result = False
 visited = [[False]*M for _ in range(N)]
 def dfs(i, j):
-    global order
+    global order, result
 
     dis, djs = [0,1],[1,0]
 
