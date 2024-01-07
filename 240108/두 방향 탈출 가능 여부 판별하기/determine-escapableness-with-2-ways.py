@@ -24,7 +24,7 @@ def dfs(i, j):
             dfs(i2,j2)
 
 def can_go(i,j):
-    in_range = 0<=i<N and 0<=j<N
+    in_range = 0<=i<N and 0<=j<M
     
     return in_range and not visited[i][j] and grid[i][j] == 1
 
