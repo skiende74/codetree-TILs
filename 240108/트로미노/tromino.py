@@ -25,11 +25,11 @@ def count_block2(i,j):
 # 본문
 result = 0
 for i in range(N-1):
-    for j in range(N-1):
+    for j in range(M-1):
         result = max(result, count_block1(i,j))
 
 for i in range(N-2):
-    for j in range(N-2):
+    for j in range(M-2):
         result = max(result, count_block2(i,j))
 
 print(result)
