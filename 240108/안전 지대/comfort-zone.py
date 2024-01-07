@@ -13,7 +13,6 @@ def dfs(i, j):
 
         if can_move(i2, j2):
             visited[i2][j2] = True
-
             dfs(i2, j2)
 
 def can_move(i, j):
