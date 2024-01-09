@@ -21,7 +21,7 @@ def mine(i,j):
 
 # 본문
 count_max = 0
-for K in range(1, N+1):
+for K in range(0, N+1):
     for i in range(0, N):
         for j in range(0, N):
             count_max = max(count_max, mine(i,j))
