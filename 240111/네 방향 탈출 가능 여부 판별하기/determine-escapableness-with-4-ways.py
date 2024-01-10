@@ -22,7 +22,7 @@ def dfs(i,j):
     for di,dj in zip(dis, djs):
         i2,j2 = i+di, j+dj
 
-        if 0<=i2<N and 0<=j2<N and not visited[i2][j2] and grid[i2][j2]:
+        if 0<=i2<N and 0<=j2<M and not visited[i2][j2] and grid[i2][j2]:
             visited[i2][j2] = True
             if (i2, j2) == (N-1, M-1):
                 escape = 1
