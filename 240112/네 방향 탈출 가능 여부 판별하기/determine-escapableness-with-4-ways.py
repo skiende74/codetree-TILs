@@ -13,7 +13,7 @@ def bfs(start):
         v = q.popleft()
 
 # dfs
-visited = [[False]*N for _ in range(N)]
+visited = [[False]*M for _ in range(N)]
 escape = 0
 def dfs(i,j):
     global escape
