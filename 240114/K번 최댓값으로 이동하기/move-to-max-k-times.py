@@ -1,6 +1,8 @@
 from collections import deque
 from heapq import heappush, heappop
+import sys
 
+sys.setrecursionlimit(10000)
 # 입력
 N, K = map(int, input().split())
 grid = [list(map(int, input().split())) for _ in range(N)]
