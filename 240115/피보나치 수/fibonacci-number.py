@@ -4,7 +4,7 @@ def fibo(n):
         memo[n] = fibo(n-1) + fibo(n-2)
     return memo[n]
 
-memo = [0]*51
+memo = defaultdict(lambda: 0)
 memo[1] = 1
 memo[2] = 1
 
