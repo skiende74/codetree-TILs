@@ -5,7 +5,7 @@ memo[1]=1
 memo[2]=2
 memo[3]=memo[3-1] + memo[3-2] + 1
 
-for i in range(4,10):
+for i in range(4,11):
     memo[i] = sum(memo[1:i])+1
 
 print(memo[n])
