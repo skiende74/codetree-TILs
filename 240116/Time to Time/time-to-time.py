@@ -1,4 +1,4 @@
-hour, mins, hour_goal, mins_goal
+hour, mins, hour_goal, mins_goal = map(int, input().split())
 
 elapsed_time = 0
 
