@@ -1,11 +1,16 @@
-n = int(input())
-memo = [0]*11
+N = int(input())
 
-memo[1]=1
-memo[2]=2
-memo[3]=memo[3-1] + memo[3-2] + 1
+answer = 0
+def dfs(k):
+    global answer
+    if k == N:
+        answer += 1
+    
+    if k>=N:
+        return
+    
+    for i in range(1, 10):
+        dfs(k+i)
 
-for i in range(4,11):
-    memo[i] = sum(memo[1:i])+1
-
-print(memo[n])
+dfs(0)
+print(answer)
