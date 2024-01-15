@@ -9,7 +9,7 @@ def dfs(k):
     if k>=N:
         return
     
-    for i in range(1, 10):
+    for i in range(1, 5):
         dfs(k+i)
 
 dfs(0)
