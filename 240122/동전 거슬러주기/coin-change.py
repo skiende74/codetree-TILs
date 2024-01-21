@@ -10,4 +10,4 @@ for i in range(1, M+1):
         if i-c >=0:
             dp[i] = min(dp[i], dp[i-c]+1)
 
-print(dp[M])
+print(dp[M] if dp[M] != INF else -1)
