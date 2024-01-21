@@ -8,7 +8,7 @@ for i in range(1, M+1):
         if i-c>=0:
             dp[i] = max(dp[i], dp[i-c]+1)
 
-if dp[M][M]==0:
-    dp[M][M]=-1
+if dp[M]==0:
+    dp[M]=-1
 
-print(dp[M][M])
+print(dp[M])
