@@ -1,6 +1,7 @@
 # 입력
 N, M = map(int, input().split())
 coins = list(map(int, input().split()))
+coins.sort()
 
 dp = [0]*(M+1) 
 for i in range(1, M+1):
