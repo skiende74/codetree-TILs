@@ -7,7 +7,7 @@ answer = False
 total = 0
 def dfs(num, i):
     global answer
-    if not i<N:
+    if not i<N or num<0:
         return
     if num == seq[i]:
         answer = True
