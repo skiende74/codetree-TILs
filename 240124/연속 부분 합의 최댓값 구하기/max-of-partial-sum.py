@@ -8,9 +8,9 @@ seq = list(map(int, input().split()))
 INT_MIN = -sys.maxsize
 dp = [INT_MIN]*N
 
-dp[0] = 0
+dp[0] = seq[0]
 # 본문
 for i in range(1, N):
     dp[i] = max(dp[i-1]+seq[i], seq[i])
 
-print(max(dp[1:]))
+print(max(dp))
