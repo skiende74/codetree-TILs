@@ -9,8 +9,7 @@ for i in range(1, 2*N+1):
 for i in range(1, 2*N+1):
     a,b = cards[i]
     for j in range(1, min(i,N)+1):
-        dp[i][j] = max(dp[i][j], dp[i-1][j-1] + a)
-        dp[i][j] = max(dp[i][j], dp[i-1][j]+b)
+        dp[i][j] = max(dp[i][j], dp[i-1][j-1] + a, dp[i-1][j] + b)
 
 #print(dp)
 print(dp[2*N][N])
