@@ -11,7 +11,8 @@ while True:
                 seq[i-j] = 0
             count = 1    
     if count>=M:
-        seq = seq[:-count]
+        for j in range(count):
+            seq[-1-j]= 0
 
     if 0 not in seq:
         break
