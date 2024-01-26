@@ -3,15 +3,16 @@ N = int(input())
 grid = [list(map(int, input().split())) for _ in range(N)]
 r,c = map(int, input().split())
 
-num = grid[r-1][c-1]
+bomb_range = grid[r-1][c-1]
 
-i,j = r-1,c-1
-for k in range(num):
-    dis,djs = [0,0,-1,1],[-1,1,0,0]
-    for di,dj in zip(dis,djs):
-        i2,j2 = i+k*di, j+k*dj
-        if 0<=i2<N and 0<=j2<N:
-            grid[i2][j2] = 0
+
+def in_bomb(i,j):
+    return (i==r-1 or j==c-1) and abs(i-(r-1)) < bomb_range and abs(j-(c-1)) < bomb_range
+
+for i in range(N):
+    for j in range(N):
+        if in_bomb(i,j):
+            grid[i][j]=0
 
 next_grid = [[0 for _ in range(N)] for _ in range(N)]
 for j in range(N):
