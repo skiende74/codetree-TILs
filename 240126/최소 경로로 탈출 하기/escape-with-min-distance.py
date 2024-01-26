@@ -25,4 +25,6 @@ def bfs(start):
                 Q.append((i2, j2))
 
 bfs((0,0))
+if dist[N-1][M-1] == sys.maxsize:
+    dist[N-1][M-1] = -1
 print(dist[N-1][M-1])
