@@ -26,4 +26,7 @@ def bfs(start):
                 Q.append((i2,j2))
 
 bfs((r1-1,c1-1))
+
+if dist[r2-1][c2-1] == MAX:
+    dist[r2-1][c2-1] = -1
 print(dist[r2-1][c2-1])
