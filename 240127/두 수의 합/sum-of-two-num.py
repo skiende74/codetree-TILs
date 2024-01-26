@@ -6,6 +6,6 @@ seq = list(map(int, input().split()))
 result = 0
 for ((a,a_c),(b,b_c)) in combinations(Counter(seq).items(), 2):
     if a+b == K:
-        result +=a+c*b_c
+        result +=a_c*b_c
 
 print(result)
