@@ -12,6 +12,9 @@ while True:
                 seq[i-j] = 0
             count = 1
         old = seq[i]
+    if count>=M:
+        for j in range(1, count+1):
+            seq[N-1-j] = 0
 
     new_seq = [-1]*N
     new_idx = 0
