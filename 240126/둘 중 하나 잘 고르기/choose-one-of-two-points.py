@@ -1,10 +1,18 @@
+import sys
+
 N = int(input())
 cards = [0]+[list(map(int, input().split())) for _ in range(2*N)]
 
-dp = [[0]*(N+1) for _ in range(2*N+1)]
+MIN = -sys.maxsize
+dp = [[MIN]*(N+1) for _ in range(2*N+1)]
+dp[0][0] = 0
+
 
 for i in range(1, 2*N+1):
     dp[i][0] = dp[i-1][0] + cards[i][1]
+
+for i in range(1, N+1):
+    dp[i][i] = dp[i-1][i-1] + cards[i][0]
 
 for i in range(1, 2*N+1):
     a,b = cards[i]
