@@ -9,8 +9,7 @@ while True:
         elif count>=M:
             for j in range(1, count+1):
                 seq[i-j] = 0
-            count = 1
-    
+            count = 1    
     if count>=M:
         seq = seq[:-count]
 
