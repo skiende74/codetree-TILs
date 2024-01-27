@@ -8,21 +8,29 @@ happy_count = 0
 # 열
 for j in range(N):
     dup_count = 1
+    max_dup_count = 1
     for i in range(1, N):
         if grid[i][j] == grid[i-1][j]:
             dup_count += 1
+            max_dup_count = max(max_dup_count, dup_count)
+        else:
+            dup_count = 1
     
-    if dup_count >= M:
+    if max_dup_count >= M:
         happy_count += 1
 
 # 행
 for i in range(N):
     dup_count = 1
+    max_dup_count = 1
     for j in range(1, N):
         if grid[i][j] == grid[i][j-1]:
             dup_count += 1
+            max_dup_count = max(max_dup_count, dup_count)
+        else:
+            dup_count = 1
     
-    if dup_count >= M:
+    if max_dup_count >= M:
         happy_count += 1
 
 
