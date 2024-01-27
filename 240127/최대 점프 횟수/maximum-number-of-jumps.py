@@ -8,5 +8,4 @@ for i in range(1, N):
         if seq[j]>=i-j and dp[i] < dp[j]+1:
             dp[i] = dp[j]+1
 
-print(dp)
 print(dp[-1])
