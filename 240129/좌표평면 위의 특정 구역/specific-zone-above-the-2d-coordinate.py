@@ -1,7 +1,7 @@
 N = int(input())
 points = [list(map(int,input().split())) for _ in range(N)]
 
-result = 1000000000
+result = 100000000000
 for i in range(N):
     new_points = [*points[:i], *points[i+1:]]
 
