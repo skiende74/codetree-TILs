@@ -26,6 +26,7 @@ while True:
         count += 1
     else: #4. 없을때. 우회전.
         i,j = i3,j3
+        direction = (direction-1)%4
         count += 2
 
 
