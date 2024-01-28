@@ -1,15 +1,9 @@
+M = 200000
 N = int(input())
 segments = [list(map(int,input().split())) for _ in range(N)]
 
 points = []
-for seg in segments:
-    i, j = seg
-    points.append((i,1))
-    points.append((j,-1))
-
-M = max(points, key=lambda x: x[0])[0]
 seq = [0]*(M+1)
-
 for seg in segments:
     i, j = seg
     seq[i] += 1
