@@ -13,7 +13,7 @@ def do():
         for di, dj in zip(dis,djs):
             i2,j2 = i+di, j+dj
 
-            if 0<=i<N and 0<=j<N and grid[i2][j2] > grid[i][j]:
+            if 0<=i2<N and 0<=j2<N and grid[i2][j2] > grid[i][j]:
                 result.append(grid[i2][j2])
                 i,j = i2,j2
                 break
