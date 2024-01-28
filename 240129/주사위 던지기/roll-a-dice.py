@@ -4,8 +4,6 @@ directions = input().split()
 r,c=r-1,c-1
 i,j = r,c
 dir2didj = {'L':[0,-1],'R':[0,1],'D':[1,0],'U':[-1,0]}
-dir2stamp = {'L':lambda k,l: dices[k][l], 'R': lambda k,l: 7-dices[k][l],
-    'D':lambda k,l: l, 'U':lambda k,l:7-l}
 dir2kl = {'L':lambda k,l: (dices[k][l],l), 'R': lambda k,l: (7-dices[k][l],l),
     'D':lambda k,l: (7-l,k), 'U':lambda k,l: (l,7-k)}
 
