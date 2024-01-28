@@ -20,4 +20,4 @@ for x0,v0 in points:
         if v == 1:
             x_start = x0
 
-print(max(ans))
+print(ans)
