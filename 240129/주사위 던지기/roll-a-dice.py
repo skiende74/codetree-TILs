@@ -7,7 +7,7 @@ dir2didj = {'L':[0,-1],'R':[0,1],'D':[1,0],'U':[-1,0]}
 dir2kl = {'L':lambda k,l: (dices[k][l],l), 'R': lambda k,l: (7-dices[k][l],l),
     'D':lambda k,l: (7-l,k), 'U':lambda k,l: (l,7-k)}
 
-dices = [[0]*7 for _ in range(7)]
+dices = [[0]*7 for _ in range(8)]
 
 dices[1] = [0,0,3,5,4,2,0]
 dices[2] = [0,4,0,1,6,0,3]
