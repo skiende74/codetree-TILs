@@ -9,7 +9,7 @@ dir2kl = {'L':lambda k,l: (dices[k][l],l), 'R': lambda k,l: (7-dices[k][l],l),
 
 dices = [[0]*7 for _ in range(7)]
 
-dices[1] = [0,0,3,5,4,2,0]
+dices[1] = [0,0,3,5,2,4,0]
 dices[2] = [0,4,0,1,6,0,3]
 dices[3] = [0,2,6,0,0,1,5]
 dices[4] = [0,5,1,0,0,6,2]
