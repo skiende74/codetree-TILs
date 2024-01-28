@@ -21,6 +21,7 @@ while True:
         break
     
     if grid[i2][j2] == '#': #1. 정면벽. 회전
+        visited[i][j][direction] = True
         direction = (direction+1)%4
         continue
     
