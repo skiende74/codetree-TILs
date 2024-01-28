@@ -4,6 +4,10 @@ a,b,c = 11,11,11
 elapsed_minutes = 0
 while True:
     if (a,b,c) == (goal_a, goal_b, goal_c):
+        print(elapsed_minutes)
+        break
+    if a==15:
+        print(-1)
         break
     
     elapsed_minutes += 1
@@ -14,5 +18,3 @@ while True:
     if b == 24:
         b = 0
         a += 1
-
-print(elapsed_minutes)
