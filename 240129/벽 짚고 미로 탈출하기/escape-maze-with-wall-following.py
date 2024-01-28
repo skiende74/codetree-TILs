@@ -8,7 +8,12 @@ i,j=r,c
 dir2vec = [[0,1],[-1,0],[0,-1,],[1,0]]
 direction = 0
 count = 0
+visited = [[[False]*4 for _ in range(N)] for _ in range(N)]
+
 while True:
+    if visited[i][j][direction]:
+        count = -1
+        break
     di,dj = dir2vec[direction]
     i2,j2 = i+di, j+dj
     if not (0<=i2<N and 0<=j2<N): # 2. 탈출
@@ -24,10 +29,14 @@ while True:
     if grid[i3][j3] == '#': #3. 한칸앞에서 오른쪽벽이있을때. 직진
         i,j = i2,j2
         count += 1
+        visited[i][j][direction] = True
+
     else: #4. 없을때. 우회전.
         i,j = i3,j3
         direction = (direction-1)%4
         count += 2
+        visited[i][j][direction] = True
+
 
 
 
