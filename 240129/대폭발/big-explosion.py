@@ -5,6 +5,7 @@ N,M,r,c = map(int, input().split())
 r,c = r-1, c-1
 grid = [[False]*N for _ in range(N)]
 grid[r][c] = True
+
 for t in range(M):
     new_grid = deepcopy(grid)
     for i in range(N):
@@ -14,7 +15,9 @@ for t in range(M):
                 for di,dj in zip(dis,djs):
                     k = 2**t
                     i2,j2= i+k*di, j+k*dj
-                    new_grid[i2][j2] = True
+
+                    if 0<=i2<N and 0<=j2<N:
+                        new_grid[i2][j2] = True
     
     grid = new_grid
 
