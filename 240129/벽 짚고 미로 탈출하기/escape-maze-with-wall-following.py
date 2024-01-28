@@ -27,15 +27,15 @@ while True:
     di2,dj2 = dir2vec[(direction-1)%4]
     i3,j3 = i2+di2, j2+dj2
     if grid[i3][j3] == '#': #3. 한칸앞에서 오른쪽벽이있을때. 직진
+        visited[i][j][direction] = True
         i,j = i2,j2
         count += 1
-        visited[i][j][direction] = True
 
     else: #4. 없을때. 우회전.
+        visited[i][j][direction] = True
         i,j = i3,j3
         direction = (direction-1)%4
         count += 2
-        visited[i][j][direction] = True
 
 
 
