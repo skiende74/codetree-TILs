@@ -23,9 +23,10 @@ while True:
     i3,j3 = i2+di2, j2+dj2
     if grid[i3][j3] == '#': #3. 한칸앞에서 오른쪽벽이있을때. 직진
         i,j = i2,j2
+        count += 1
     else: #4. 없을때. 우회전.
         i,j = i3,j3
-    count += 1
+        count += 2
 
 
 
