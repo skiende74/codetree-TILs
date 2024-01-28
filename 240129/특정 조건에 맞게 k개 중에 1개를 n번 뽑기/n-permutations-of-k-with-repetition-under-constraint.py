@@ -9,7 +9,7 @@ def choose(num):
         return
 
     for i in range(1,K+1):
-        if num<=N-2 or answer[-(3-1):] != [str(i)]*(3-1):
+        if num<=1 or answer[-(3-1):] != [str(i)]*(3-1):
             answer.append(str(i))
             choose(num+1)
             answer.pop()
