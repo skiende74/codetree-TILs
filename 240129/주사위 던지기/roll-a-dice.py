@@ -23,7 +23,8 @@ for direction in directions:
     di,dj = dir2didj[direction]
     i2,j2 = i+di, j+dj
     if 0<=i2<N and 0<=j2<N:
-        k,l = dir2kl[direction](k,l)
+        fun = dir2kl[direction]
+        k,l = fun(k,l)
         grid[i2][j2] = 7-k #stamp
         i,j = i2,j2
 
