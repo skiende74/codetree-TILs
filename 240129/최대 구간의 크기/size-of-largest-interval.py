@@ -8,14 +8,14 @@ for s,e in segments:
 points.sort()
 
 v = 0
-ans = []
+ans = 0
 x_start = 0
 for x0,v0 in points:
     v += v0
     
     if v0 == -1:
         if v == 0:
-            ans.append(x0-x_start)
+            ans = max(ans, x0-x_start)
     else:
         if v == 1:
             x_start = x0
