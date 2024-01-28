@@ -19,6 +19,7 @@ dices[5] = [0,3,0,6,1,0,4]
 dices[6] = [0,0,4,2,5,3,0]
 
 grid = [[0]*N for _ in range(N)]
+grid[i][j] = 6
 k,l = 1,2
 for direction in directions:
     di,dj = dir2didj[direction]
