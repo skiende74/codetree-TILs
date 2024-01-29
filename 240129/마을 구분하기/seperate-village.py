@@ -24,6 +24,6 @@ for i in range(N):
             result.append(in_count)
 
 result.sort()
-print(len(in_count))
+print(len(result))
 for w in result:
     print(w)
