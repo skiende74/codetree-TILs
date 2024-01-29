@@ -17,7 +17,7 @@ for j in range(N):
         else:
             dup_count = 1
     
-    if dup_count >= M:
+    if max_dup_count >= M:
         happy_count += 1
 
 # 행
