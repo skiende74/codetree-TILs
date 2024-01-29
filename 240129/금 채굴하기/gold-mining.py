@@ -1,5 +1,3 @@
-import sys
-
 N, M = map(int, input().split())
 grid = [list(map(int,input().split())) for _ in range(N)]
 
@@ -7,7 +5,7 @@ grid = [list(map(int,input().split())) for _ in range(N)]
 max_gold = 0
 for i in range(N):
     for j in range(N):
-        for K in range(N):
+        for K in range(2*N-1):
 
             earn = -(K*K + (K+1)*(K+1))
             gold = 0
