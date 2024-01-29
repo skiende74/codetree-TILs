@@ -4,7 +4,7 @@ N, M = map(int, input().split())
 grid = [list(map(int,input().split())) for _ in range(N)]
 
 #
-max_gold = -sys.maxsize
+max_gold = 0
 for i in range(N):
     for j in range(N):
         for K in range(N):
