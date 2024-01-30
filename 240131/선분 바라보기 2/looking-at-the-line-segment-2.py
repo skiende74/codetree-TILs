@@ -1,4 +1,5 @@
 from heapq import heappush, heappop
+from collections import defaultdict
 
 N = int(input())
 segments = [list(map(int,input().split())) for _ in range(N)]
@@ -10,7 +11,7 @@ for i,(y,s,e) in enumerate(segments):
 
 
 lines = []
-on_line = [True]*N
+on_line = defaultdict(lambda:True)
 ans = set()
 
 def heappop_lines():
