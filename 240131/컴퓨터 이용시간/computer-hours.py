@@ -1,8 +1,9 @@
-from heapq import heappush, heappop
+from heapq import heappush, heappop,heapify
 
 N = int(input())
 segments = [list(map(int,input().split())) for _ in range(N)]
 computers = list(range(1,N+1))
+heapify(computers)
 
 points= []
 for index,(s,e) in enumerate(segments):
