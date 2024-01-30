@@ -21,7 +21,7 @@ def heappop_lines():
             return (y2, line_i2)
     return (None, None)
 
-points.sort()
+points.sort(key=lambda x: (x[0]))
 for x,v,line_i,y in points:
     # lines의 최하위선이 없거나, 최하위선보다 지금넣는게 작으면 ans.add(line_i)
     if v == 1:
@@ -36,15 +36,12 @@ for x,v,line_i,y in points:
         
     # 만약 빼는 선이 lines의 최하위 선이고,
     # 그다음최하위선이 존재시 그 선을 add
-    # 빼는법 : 최하위선을 뺄때는, 바닥의 off line 선을 모두제거
     elif v == -1:
         y2, line_i2 = heappop_lines()
         if y2:
             if y == y2:
                 y3, line_i3 = heappop_lines()
-                if y3==None:
-                    pass
-                else:
+                if y3:
                     ans.add(line_i3)
                     heappush(lines, (y3,line_i3))
             heappush(lines, (y2, line_i2))
