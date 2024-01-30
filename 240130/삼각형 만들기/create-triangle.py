@@ -10,6 +10,6 @@ for i in range(N):
             yy = p1[0] == p2[0] or p1[0] == p3[0] or p2[0] == p3[0]
             xx = p1[1] == p2[1] or p1[1] == p3[1] or p2[1] == p3[1]
             if xx and yy:
-                area2 = p1[0]*p2[1] + p2[0]*p3[1] + p3[0]*p1[1]-(p1[1]*p2[0]+p2[1]*p3[0]+p3[1]*p1[0])
+                area2 = abs(p1[0]*p2[1] + p2[0]*p3[1] + p3[0]*p1[1]-(p1[1]*p2[0]+p2[1]*p3[0]+p3[1]*p1[0]))
                 max_area2 = max(max_area2, area2)
 print(max_area2)
