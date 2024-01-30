@@ -39,14 +39,15 @@ for x,v,line_i,y in points:
     # 빼는법 : 최하위선을 뺄때는, 바닥의 off line 선을 모두제거
     elif v == -1:
         y2, line_i2 = heappop_lines()
-        if y2 and y == y2:
-            y3, line_i3 = heappop_lines()
-            if y3==None:
-                pass
-            else:
-                ans.add(line_i3)
-                heappush(lines, (y3,line_i3))
-        heappush(lines, (y2, line_i2))
+        if y2:
+            if y == y2:
+                y3, line_i3 = heappop_lines()
+                if y3==None:
+                    pass
+                else:
+                    ans.add(line_i3)
+                    heappush(lines, (y3,line_i3))
+            heappush(lines, (y2, line_i2))
         on_line[line_i] = False
 
 print(len(ans))
