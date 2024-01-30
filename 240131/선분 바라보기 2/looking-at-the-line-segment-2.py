@@ -1,0 +1,48 @@
+from heapq import heappush, heappop
+
+N = int(input())
+segments = [list(map(int,input().split())) for _ in range(N)]
+
+points = []
+for i,(y,s,e) in enumerate(segments):
+    points.append((s,+1,i,y))
+    points.append((e,-1,i, y))
+
+
+lines = []
+on_line = [True]*N
+ans = set()
+
+def heappop_lines():
+    while lines:
+        y2, line_i2 = heappop(lines)
+        if on_line[line_i2]:
+            return (y2, line_i2)
+    return (None, None)
+
+points.sort()
+for x,v,line_i,y in points:
+    # lines의 최하위선보다 지금넣는게 작으면 ans.add(line_i)
+    if v == 1:
+        y2, line_i2 = heappop_lines()
+        if y2 and y < y2:
+            ans.add(line_i)
+            heappush(lines, (y2, line_i2))
+        elif y2 == None:
+            ans.add(line_i)
+        heappush(lines,(y, line_i))
+        
+    # 만약 빼는 선이 lines의 최하위 선이고,
+    # 그다음최하위선이 존재시 그 선을 add
+    # 빼는법 : 최하위선을 뺄때는, 바닥의 off line 선을 모두제거
+    elif v == -1:
+        y2, line_i2 = heappop_lines()
+        if y2 and y == y2:
+            y3, line_i3 = heappop_lines()
+            if y3:
+                ans.add(line_i3)
+                heappush(lines, (y3,line_i3))
+            heappush(lines, (y2, line_i2))
+        on_line[line_i] = False
+
+print(len(ans))
