@@ -25,14 +25,18 @@ points.sort(key=lambda x: (x[0]))
 for x,v,line_i,y in points:
     # lines의 최하위선이 없거나, 최하위선보다 지금넣는게 작으면 ans.add(line_i)
     if v == 1:
-        y2, line_i2 = heappop_lines()
+        # y2, line_i2 = heappop_lines()
 
-        if y2 == None:
-            ans.add(line_i)
-        elif y < y2:
-            ans.add(line_i)
-            heappush(lines, (y2, line_i2))
+        # if y2 == None:
+        #     ans.add(line_i)
+        # elif y < y2:
+        #     ans.add(line_i)
+        #     heappush(lines, (y2, line_i2))
         heappush(lines,(y, line_i))
+        y2, line_i2 = heappop_lines()
+        if line_i2 == line_i:
+            ans.add(line_i)
+        heappush(lines, (y2, line_i2))
         
     # 만약 빼는 선이 lines의 최하위 선이고,
     # 그다음최하위선이 존재시 그 선을 add
