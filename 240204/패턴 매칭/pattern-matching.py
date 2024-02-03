@@ -18,7 +18,7 @@ for i in range(1, M+1):
             dp[i][j] = dp[i-1][j-1]
         elif p[j-1] == '*':
             dp[i][j] = any([dp[i][j-2], dp[i][j-1]])
-            dp[i][j] = dp[i][j] or (dp[i-1][j-1] and (a[i-1]==p[j-2] or p[j-2]=='.'))
+            dp[i][j] = dp[i][j] or (dp[i-1][j] and (a[i-1]==p[j-2] or p[j-2]=='.'))
         else:
             dp[i][j] = dp[i-1][j-1] and a[i-1] == p[j-1]
 
