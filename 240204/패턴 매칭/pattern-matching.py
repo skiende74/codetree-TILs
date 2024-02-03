@@ -7,7 +7,7 @@ dp = [[False]*(N+1) for _ in range(M+1)]
 
 #
 for i in range(1, M+1):
-    dp[i][0] = True
+    dp[i][0] = False
 for j in range(1, N+1):
     dp[0][j] = False
 dp[0][0] = True
