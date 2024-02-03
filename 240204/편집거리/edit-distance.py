@@ -15,7 +15,7 @@ for i in range(M):
         if A[i]==B[j]:
             dp[i+1][j+1] = dp[i][j]
         else:
-            dp[i+1][j+1] = min(dp[i][j+1],dp[i+1][j])+1
+            dp[i+1][j+1] = min(dp[i][j],dp[i][j+1],dp[i+1][j])+1
 
 
 print(dp[-1][-1])
