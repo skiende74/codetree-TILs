@@ -9,7 +9,7 @@ for _ in range(K):
 
 def dfs(i1,j1,i2,j2, x):
     global answer
-    if x in [25,26] and (i1,j1)==(i2,j2):
+    if x in [25,26] and (i1,j1)==(i2,j2) and all(map(all, visited)):
         answer += 1
         return
     dis, djs = [0,0,-1,1],[-1,1,0,0]
