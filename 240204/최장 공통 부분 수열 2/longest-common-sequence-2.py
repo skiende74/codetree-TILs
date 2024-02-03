@@ -3,6 +3,8 @@ M,N = len(A),len(B)
 
 dp = [['' for _ in range(N+1)] for _ in range(M+1)]
 
+dp[1][1] = A[0] if A[0]==B[0] else ''
+
 for i in range(1, M+1):
     for j in range(1, N+1):
         if A[i-1] == B[j-1]:
