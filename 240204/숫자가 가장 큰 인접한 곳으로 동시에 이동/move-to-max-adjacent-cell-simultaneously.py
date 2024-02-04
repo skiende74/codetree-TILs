@@ -1,3 +1,4 @@
+from copy import deepcopy
 N, M, t = map(int,input().split())
 grid = [list(map(int,input().split())) for _ in range(N)]
 balls = [list(map(int,input().split())) for _ in range(M)]
