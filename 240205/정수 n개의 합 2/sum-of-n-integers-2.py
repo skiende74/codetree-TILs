@@ -5,7 +5,7 @@ prefix_sum = [0]*(N+1)
 total = sum(seq[:K])
 max_total = total
 
-for i in range(N):
+for i in range(1, N+1):
     prefix_sum[i] = prefix_sum[i-1] + seq[i-1]
 
 for i in range(K, N):
