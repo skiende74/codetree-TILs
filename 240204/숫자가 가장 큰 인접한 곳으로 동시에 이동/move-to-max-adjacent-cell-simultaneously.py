@@ -12,9 +12,7 @@ while rounds<t:
     new_count = [[0]*N for _ in range(N)]
     for i in range(N):
         for j in range(N):
-            if count[i][j] >= 2:
-                new_count[i][j] = 0
-            elif count[i][j] == 1:
+            if count[i][j] == 1:
                 dis, djs = [0,0,-1,1],[-1,1,0,0]
                 priority = -1
                 for di, dj in zip(dis,djs):
