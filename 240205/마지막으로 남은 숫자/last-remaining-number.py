@@ -12,4 +12,7 @@ while len(pq)>=2:
     d = n2-n1
     if d != 0:
         heappush(pq, -d)
-print(-pq[0])
+    if len(pq) == 0:
+        print(-n2)
+    elif len(pq) == 1:
+        print(-pq[0])
