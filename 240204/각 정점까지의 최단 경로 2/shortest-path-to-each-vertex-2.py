@@ -18,4 +18,6 @@ def floyd():
 
 floyd()
 for i in range(N):
-    print(' '.join(map(str, graph[i])))
+    for j in range(N):
+        print(-1 if graph[i][j] == 1000000000 else graph[i][j], end=' ')
+    print()
