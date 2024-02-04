@@ -15,8 +15,11 @@ dist = [MAX]*(N+1)
 def dijkstra(start):
     pq = [(0,start)]
     dist[start] = 0
+
     while pq:
         d, i = heappop(pq)
+        if d != dist[i]:
+            continue
 
         for i2, d2 in graph[i]:
             if d + d2 < dist[i2]:
