@@ -12,7 +12,8 @@ while len(pq)>=2:
     d = n2-n1
     if d != 0:
         heappush(pq, -d)
+
     if len(pq) == 0:
-        print(-n2)
+        print(-1)
     elif len(pq) == 1:
         print(-pq[0])
