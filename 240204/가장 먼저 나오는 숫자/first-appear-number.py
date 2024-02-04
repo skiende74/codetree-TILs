@@ -19,4 +19,4 @@ queries = list(map(int,input().split()))
 
 for q in queries:
     ans = binary_lower(q)
-    print(ans+1 if q == seq[ans] else -1)
+    print(ans+1 if ans < N and q == seq[ans] else -1)
