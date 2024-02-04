@@ -2,7 +2,6 @@ A, B = input(),input()
 M, N = len(A), len(B)
 
 dp=[[0]*(N+1) for _ in range(M+1)]
-dp[1][1] = 1 if A[0] == B[0] else 0
 for i in range(1,M+1):
     for j in range(1,N+1):
         if A[i-1]==B[j-1]:
