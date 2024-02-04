@@ -9,7 +9,7 @@ heapify(pq)
 while len(pq)>=2:
     n1 = heappop(pq)
     n2 = heappop(pq)
-
-    if n1 != n2:
-        heappush(pq, n1-n2)
+    d = n2-n1
+    if d != 0:
+        heappush(pq, -d)
 print(-pq[0])
