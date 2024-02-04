@@ -18,7 +18,7 @@ dp[1][1] = 1
 for i in range(1, N+2):
     for j in range(1, M+2):
         if not blocked[i][j][0]:
-            dp[i][j] = dp[i][j-1]
+            dp[i][j] += dp[i][j-1]
         if not blocked[i][j][1]:
             dp[i][j] += dp[i-1][j]
 
