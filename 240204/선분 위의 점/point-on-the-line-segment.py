@@ -17,6 +17,7 @@ def binary_lower(target):
             left = mid+1
     return min_idx
 
+points.sort()
 for l_min,l_max in lines:
     ans = binary_lower(l_max+1)-binary_lower(l_min)
     print(ans)
