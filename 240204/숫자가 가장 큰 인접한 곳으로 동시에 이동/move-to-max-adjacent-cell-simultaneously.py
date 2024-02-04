@@ -7,7 +7,7 @@ for r,c in balls:
     count[i][j] = 1
 
 rounds = 0
-while rounds==t:
+while rounds<t:
     new_count = [[0]*N for _ in range(N)]
     for i in range(N):
         for j in range(N):
