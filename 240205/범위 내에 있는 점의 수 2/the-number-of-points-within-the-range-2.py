@@ -10,4 +10,4 @@ for i in range(0, N+1):
 
 for _ in range(Q):
     a,b = map(int,input().split())
-    print(prefix_sum[b] - prefix_sum[a] + nums[a] )
+    print(prefix_sum[b] - prefix_sum[a-1] )
