@@ -17,6 +17,7 @@ for i1 in range(1,N+1):
             prefix_sum[i2][j-1] - prefix_sum[i1-1][j] + prefix_sum[i1-1][j-1]
 
             dp[j] = max(dp[j-1]+now, now)
-        ans = max(ans, dp[-1])
+        ans = max(ans, max(dp))
+
 
 print(ans)
