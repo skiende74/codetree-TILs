@@ -25,5 +25,5 @@ def bfs():
                 count += 1
                 Q.append((i2,j2))
 
-
-print(bfs())
+bfs()
+print(count)
