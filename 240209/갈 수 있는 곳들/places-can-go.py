@@ -1,15 +1,18 @@
 from collections import deque
 N, K = map(int, input().split())
 grid = [list(map(int,input().split())) for _ in range(N)]
+visited = [[False]*(N) for _ in range(N)]
 
 Q = deque()
 for _ in range(K):
     r, c = map(int,input().split())
     i, j = r-1, c-1
+    count += 1
+    visited[i][j] = True
     Q.append((i,j))
 
 def bfs():
-    count = 0
+    global count
     while Q:
         i, j = Q.popleft()
 
@@ -20,7 +23,6 @@ def bfs():
                 visited[i2][j2] = True
                 count += 1
                 Q.append((i2,j2))
-    return count
 
-visited = [[False]*(N) for _ in range(N)]
+
 print(bfs())
