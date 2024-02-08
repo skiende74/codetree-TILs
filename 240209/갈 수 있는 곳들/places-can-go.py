@@ -3,6 +3,7 @@ N, K = map(int, input().split())
 grid = [list(map(int,input().split())) for _ in range(N)]
 visited = [[False]*(N) for _ in range(N)]
 
+count = 0
 Q = deque()
 for _ in range(K):
     r, c = map(int,input().split())
