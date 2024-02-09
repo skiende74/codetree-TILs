@@ -6,15 +6,14 @@ def calc_value(arr):
     def calc_value_inner(i, w):
         global result
         if w > C or i == M:
-            return 0
+            return sum(map(lambda x: x**2, selected_arr[:-1]))
 
-        res0 = sum(map(lambda x: x**2, selected_arr))    
         res1 = calc_value_inner(i+1, w)
 
         selected_arr.append(arr[i])
         res2 = calc_value_inner(i+1, w+arr[i])
         selected_arr.pop()
-        return max(res1, res2, res0)
+        return max(res1, res2)
 
     selected_arr = []
     return calc_value_inner(0, 0)
