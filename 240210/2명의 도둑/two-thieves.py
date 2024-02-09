@@ -4,10 +4,10 @@ grid = [list(map(int,input().split())) for _ in range(N)]
 def calc_value(arr):
     def calc_value_inner(i, w):
         nonlocal result
+        result = max(result, sum(map(lambda x: x**2, selected_arr)))
         if w > C or i == M:
             return 
 
-        result = max(result, sum(map(lambda x: x**2, selected_arr)))
         calc_value_inner(i+1, w)
 
         selected_arr.append(arr[i])
@@ -34,5 +34,4 @@ for i in range(N):
         for j2 in range(j1+M, N-M+1):
             ans = max(ans, calc_value(grid[i][j1:j1+M]) + calc_value(grid[i][j2:j2+M]))
 
-print(values)
 print(ans)
