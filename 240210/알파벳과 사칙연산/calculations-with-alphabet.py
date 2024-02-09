@@ -32,6 +32,6 @@ for i in range(1, len(eq)):
     else:
         alphas.append(eq[i])
 N = len(ops)
-ans = -2**31
+ans = -2**32
 dfs()
 print(ans)
