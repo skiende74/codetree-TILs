@@ -21,7 +21,7 @@ def calc():
         if op == '*':
             result *= get_num(alpha)
         if op == '/':
-            result /= get_num(alpha)
+            result //= get_num(alpha)
     return result
 
 eq = input()
