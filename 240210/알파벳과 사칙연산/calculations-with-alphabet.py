@@ -15,7 +15,7 @@ def calc():
     result = get_num(alphas[0])
     for alpha, op in zip(alphas[1:], ops):
         if op == '+':
-            result *= get_num(alpha)
+            result += get_num(alpha)
         if op == '-':
             result -= get_num(alpha)
         if op == '*':
