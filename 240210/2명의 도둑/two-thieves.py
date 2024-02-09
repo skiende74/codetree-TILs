@@ -2,14 +2,13 @@ N, M, C = map(int, input().split())
 grid = [list(map(int,input().split())) for _ in range(N)]
 
 def calc_value(arr):
-    
+    arr.sort(key=lambda x: -x)
     w = 0
     for i, val in enumerate(arr):
         w += val
         if w > C:
             arr = arr[:i]
         
-
     return sum(map(lambda x: x**2, arr))
 
 values = [0]*N
