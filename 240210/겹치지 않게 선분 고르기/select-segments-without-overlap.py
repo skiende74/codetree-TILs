@@ -25,6 +25,7 @@ def is_possible():
     for x,v in points:
         if count >= 1 and v==1:
             return False
+        count += v
     return True
 
 dfs(0)
