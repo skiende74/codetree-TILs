@@ -8,8 +8,9 @@ segments_selected = []
 ans = 0
 def dfs(i):
     global ans
-    if i==N and is_possible():
-        ans = max(ans, len(segments_selected))
+    if i==N
+        if is_possible():
+            ans = max(ans, len(segments_selected))
         return
 
     dfs(i+1)
