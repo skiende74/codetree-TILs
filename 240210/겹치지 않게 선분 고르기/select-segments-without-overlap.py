@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(100000000)
+sys.setrecursionlimit(1000000)
 
 N = int(input())
 segments = [list(map(int,input().split())) for _ in range(N)]
