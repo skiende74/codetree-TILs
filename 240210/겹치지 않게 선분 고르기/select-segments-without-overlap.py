@@ -6,7 +6,7 @@ for s, e in segments:
     points.append((s,+1))
     points.append((e,-1))
 
-points.sort()
+points.sort(key=lambda x: (x[0],-x[1]))
 
 count = 0
 ans = 0
