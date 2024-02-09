@@ -1,15 +1,23 @@
 N, M, C = map(int, input().split())
 grid = [list(map(int,input().split())) for _ in range(N)]
 
+result = 0
 def calc_value(arr):
-    arr.sort(key=lambda x: -x)
-    w = 0
-    for i, val in enumerate(arr):
-        w += val
-        if w > C:
-            arr = arr[:i]
-        
-    return sum(map(lambda x: x**2, arr))
+    def calc_value_inner(i, w):
+        global result
+        if w > C or i == M:
+            return 0
+
+        res0 = sum(map(lambda x: x**2, selected_arr))    
+        res1 = calc_value_inner(i+1, w)
+
+        selected_arr.append(arr[i])
+        res2 = calc_value_inner(i+1, w+arr[i])
+        selected_arr.pop()
+        return max(res1, res2, res0)
+
+    selected_arr = []
+    return calc_value_inner(0, 0)
 
 values = [0]*N
 for i in range(N):
