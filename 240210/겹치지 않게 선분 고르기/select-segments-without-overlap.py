@@ -1,3 +1,5 @@
+import sys
+sys.setrecursionlimit(1_000_000_00)
 N = int(input())
 segments = [list(map(int,input().split())) for _ in range(N)]
 segments_selected = []
