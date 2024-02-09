@@ -1,5 +1,3 @@
-import sys
-sys.setrecursionlimit(100000)
 def get_num(char):
     return selected_nums[ord(char) - ord('a')]
 def dfs():
