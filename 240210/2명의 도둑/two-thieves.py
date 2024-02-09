@@ -7,8 +7,8 @@ def calc_value(arr):
         
         if w>C:
             return
-        result = max(result, sum(map(lambda x: x**2, selected_arr)))
         if i == M:
+            result = max(result, sum(map(lambda x: x**2, selected_arr)))
             return 
 
         calc_value_inner(i+1, w)
