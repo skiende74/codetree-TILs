@@ -3,12 +3,12 @@ grid = [list(map(int,input().split())) for _ in range(N)]
 
 def calc_value(arr):
     def calc_value_inner(i, w):
+        nonlocal result
         
         if w>C:
             return
-        nonlocal result
-        result = max(result, sum(map(lambda x: x**2, selected_arr)))
         if i == M:
+            result = max(result, sum(map(lambda x: x**2, selected_arr)))
             return 
 
         calc_value_inner(i+1, w)
