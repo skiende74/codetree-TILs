@@ -4,7 +4,7 @@ def get_num(char):
     return selected_nums[ord(char) - ord('a')]
 def dfs():
     global ans
-    if len(selected_nums) == N+1:
+    if len(selected_nums) == 6:
         ans = max(ans, calc())
         return
 
