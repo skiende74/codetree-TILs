@@ -34,4 +34,5 @@ for i in range(N):
         for j2 in range(j1+M, N-M+1):
             ans = max(ans, calc_value(grid[i][j1:j1+M]) + calc_value(grid[i][j2:j2+M]))
 
+print(values)
 print(ans)
