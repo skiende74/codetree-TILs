@@ -12,7 +12,7 @@ def dfs(i, j):
 
     d = dir2vec[grid_dir[i][j]]
     for k in range(1, N):
-        i2, j2 = i+d[0]*k, i+d[1]*k
+        i2, j2 = i+d[0]*k, j+d[1]*k
         if 0<=i2<N and 0<=j2<N and grid[i2][j2] > grid[i][j]:
             move += 1
             max_move = max(max_move, move)
