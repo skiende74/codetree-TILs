@@ -19,9 +19,8 @@ def dfs(i, j):
             dfs(i2, j2)
             move -= 1
 
-for x in range(N):
-    for y in range(N):
-        move, max_move = 0,0
-        dfs(x, y)
+r,c = map(int,input().split())
+move, max_move = 0,0
+dfs(r-1,c-1)
 
 print(max_move)
