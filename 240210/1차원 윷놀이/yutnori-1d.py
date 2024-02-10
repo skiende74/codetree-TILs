@@ -1,21 +1,18 @@
 N, M, K = map(int, input().split())
 distances = list(map(int,input().split()))
-selected = []
+pieces = [0]*K
 
 ans = 0
-def dfs():
+def dfs(i):
     global ans
-    if len(selected) == N:
-        move = [0]*K
-        for i, dist in enumerate(distances):
-            move[selected[i]] += dist
-        ans = max(ans, sum([1 for m in move if m>=M-1]))
+    if i == N:
+        ans = max(ans, sum([1 for m in pieces if m>=M-1]))
         return
 
-    for i in range(K):
-        selected.append(i)
-        dfs()
-        selected.pop()
+    for k in range(K):
+        pieces[k] += distances[i]
+        dfs(i+1)
+        pieces[k] -= distances[i]
 
-dfs()
+dfs(0)
 print(ans)
