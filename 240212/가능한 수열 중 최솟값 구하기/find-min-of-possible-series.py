@@ -1,3 +1,4 @@
+import sys
 N = int(input())
 
 ans = ''
@@ -5,7 +6,8 @@ result = []
 def dfs():
     global ans
     if len(ans) == N:
-        result.append(ans)
+        print(ans)
+        sys.exit(0)
         return
 
     for i in range(4,7):
