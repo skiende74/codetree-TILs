@@ -16,5 +16,6 @@ def dfs(i):
         count += 1
         dfs(i+di)
         count -= 1
+
 dfs(1)
-print(ans)
+print(ans if ans != INF else -1)
