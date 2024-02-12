@@ -20,10 +20,10 @@ def dist(p1, p2):
 def dfs(i, j, chosen):
     global ans, count
 
-    if i == 9+1:
-        return
     if j == 3:
         ans = min(ans, count + dist(chosen, end))
+        return
+    if i == 9+1:
         return
     
     dfs(i+1, j, chosen)
