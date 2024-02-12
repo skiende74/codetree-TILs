@@ -1,19 +1,19 @@
 N, M = map(int, input().split())
 
 combination = []
-def choose(curr_num, cnt):
+def choose(i):
     global combination
 
-    if curr_num == N+1:
-        if cnt==M:
+    if i == N+1:
+        if len(combination)==M:
             print(' '.join(combination))
         return
     
 
-    combination.append(str(curr_num))
-    choose(curr_num + 1, cnt+1)
+    combination.append(str(i))
+    choose(i + 1)
     combination = combination[:-1]
 
-    choose(curr_num + 1, cnt)
+    choose(i + 1)
 
-choose(1,0)
+choose(1)
