@@ -14,4 +14,7 @@ while i<=N and j<=N:
     else:
         ans = min(ans, j-i+1)
         i+=1
-print(ans)
+if ans == 10**6:
+    print(-1)
+else:
+    print(ans)
