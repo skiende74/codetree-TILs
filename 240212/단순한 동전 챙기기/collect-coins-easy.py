@@ -28,9 +28,10 @@ def dfs(i, j, chosen):
     
     dfs(i+1, j, chosen)
 
-    count += dist(chosen, pose[j+1])
-    dfs(i+1, j+1, pose[j+1])
-    count -= dist(chosen, pose[j+1])
+    if pose[j+1]:
+        count += dist(chosen, pose[j+1])
+        dfs(i+1, j+1, pose[j+1])
+        count -= dist(chosen, pose[j+1])
 
 dfs(1, 0, start)
 if ans == INF:
