@@ -12,7 +12,7 @@ def choose(i):
 
     combination.append(str(i))
     choose(i + 1)
-    combination = combination[:-1]
+    combination.pop()
 
     choose(i + 1)
 
