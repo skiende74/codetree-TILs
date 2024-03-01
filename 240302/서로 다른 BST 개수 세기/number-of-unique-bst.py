@@ -1,6 +1,14 @@
 N = int(input())
-dp = [[-1,-1],[1,0]]+[[-1,-1] for _ in range(N-1)]
-for i in range(2,N+1):
-    dp[i][0] = dp[i-1][0]*2 + dp[i-1][1]
-    dp[i][1] = dp[i-1][0] + dp[i-1][1]*2 + dp[i-1][1]**2
-print(dp[N][0])
+UNUSED=-1
+dp = [1,1]+[UNUSED]*(N-1)
+
+def count(i):
+    if dp[i] != UNUSED: return dp[i]
+    
+    result = 0
+    for i in range(N):
+        result += count(i)*count(N-i-1)
+    dp[i] = result
+    return dp[i]
+
+print(count(N))
