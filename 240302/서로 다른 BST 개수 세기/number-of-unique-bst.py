@@ -9,7 +9,7 @@ def count(i):
     if i<= 1: return 1
     
     result = 0
-    for j in range(N):
+    for j in range(i):
         result += count(j)*count(i-j-1)
     dp[i] = result
     
