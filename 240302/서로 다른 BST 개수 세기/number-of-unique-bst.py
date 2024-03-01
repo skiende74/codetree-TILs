@@ -10,7 +10,7 @@ def count(i):
     
     result = 0
     for j in range(N):
-        result += count(i)*count(i-j-1)
+        result += count(j)*count(i-j-1)
     dp[i] = result
     
     return dp[i]
