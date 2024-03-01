@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10**5)
 N = int(input())
 UNUSED=-1
 dp = [1,1]+[UNUSED]*(N-1)
