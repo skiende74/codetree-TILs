@@ -1,22 +1,18 @@
-n = int(input())
+N = int(input())
+UNUSED=-1
+dp = [1,1]+[UNUSED]*(N-1)
 
-UNUSED = -1
-
-memo = [UNUSED for _ in range(n + 1)]
-
-def get_num_of_unique_bst(n):
-    if memo[n] != UNUSED:
-        return memo[n]
+def count(i):
+    if dp[i] != UNUSED:
+        return dp[i]
     
-    if n <= 1:
-        return 1
+    if i<= 1: return 1
     
-    number_of_unique_bst = 0
-    for i in range(n):
-        number_of_unique_bst += get_num_of_unique_bst(i) * \
-                                get_num_of_unique_bst(n - i - 1)
-        
-    memo[n] = number_of_unique_bst
-    return memo[n]
+    result = 0
+    for i in range(N):
+        result += count(i)*count(N-i-1)
+    dp[i] = result
+    
+    return dp[i]
 
-print(get_num_of_unique_bst(n))
+print(count(N))
