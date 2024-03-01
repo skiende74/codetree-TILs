@@ -6,7 +6,7 @@ def count(i):
     if dp[i] != UNUSED:
         return dp[i]
     
-    if n<= 1: return 1
+    if N<= 1: return 1
     
     result = 0
     for i in range(N):
