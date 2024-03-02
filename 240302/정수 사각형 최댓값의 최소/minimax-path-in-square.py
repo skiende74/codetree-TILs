@@ -8,7 +8,8 @@ dp = [[MAX]*N for _ in range(N)]
 def initialize_dp():
     for i in range(N):
         for j in range(N):
-            dp[i][j] = MAX
+            dp[i][j] = -MAX
+    
     dp[0][0] = grid[0][0]
     for i in range(1, N):
         dp[i][0] = max(dp[i-1][0], grid[i][0])
