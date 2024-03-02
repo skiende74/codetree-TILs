@@ -15,6 +15,10 @@ def initialize_dp():
         dp[i][0] = max(dp[i-1][0], grid[i][0])
     for j in range(1, N):
         dp[0][j] = max(dp[0][j-1], grid[0][j-1])
+    
+    for i in range(1, N):
+        for j in range(1, N):
+            dp[i][j] = MAX
 
 initialize_dp()
 
