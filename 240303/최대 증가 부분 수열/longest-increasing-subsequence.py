@@ -6,4 +6,4 @@ for i in range(1, N):
     for j in range(i):
         if seq[j] < seq[i]:
             dp[i] = max(dp[i], dp[j]+1)
-print(dp[-1])
+print(max(dp))
