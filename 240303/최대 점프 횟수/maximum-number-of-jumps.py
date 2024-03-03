@@ -10,7 +10,6 @@ for i in range(1,N):
 def answer():
     for i in range(1, N):
         if dp[i] == 0:
-            print(max(dp[:i]))
-            return
-    print(max(dp))
-answer()
+            return max(dp[:i])
+    return max(dp)
+print(answer())
