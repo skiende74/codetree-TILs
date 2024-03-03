@@ -10,9 +10,4 @@ for i in range(1,N):
         if seq[j] >= i-j and dp[j] != INT_MIN:
             dp[i] = max(dp[i], dp[j]+1)
 
-def answer():
-    for i in range(1, N):
-        if dp[i] == 0:
-            return max(dp[:i])
-    return max(dp)
-print(max(dp))
+print(dp[-1])
