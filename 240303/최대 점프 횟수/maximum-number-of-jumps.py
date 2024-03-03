@@ -1,10 +1,13 @@
+import sys
+INT_MIN = -sys.maxsize
+
 N = int(input())
 seq = list(map(int,input().split()))
-dp = [0]*N
+dp = [INT_MIN]*N
 
 for i in range(1,N):
     for j in range(i):
-        if seq[j] >= i-j:
+        if seq[j] >= i-j and dp[j] != INT_MIN:
             dp[i] = max(dp[i], dp[j]+1)
 
 def answer():
@@ -12,4 +15,4 @@ def answer():
         if dp[i] == 0:
             return max(dp[:i])
     return max(dp)
-print(answer())
+print(max(dp))
