@@ -10,7 +10,7 @@ def max2d(A):
     return max(map(max, A))
 
 for i1 in range(N):
-    for j1 in range(N):
+    for j1 in range(M):
         for i2 in range(i1):
             for j2 in range(j1):
                 if grid[i2][j2] < grid[i1][j1] and dp[i2][j2] != INT_MIN:
