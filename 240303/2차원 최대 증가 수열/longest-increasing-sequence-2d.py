@@ -15,5 +15,4 @@ for i1 in range(N):
             for j2 in range(j1):
                 if grid[i2][j2] < grid[i1][j1] and dp[i2][j2] != INT_MIN:
                     dp[i1][j1] = max(dp[i1][j1], dp[i2][j2]+1)
-
 print(max2d(dp))
