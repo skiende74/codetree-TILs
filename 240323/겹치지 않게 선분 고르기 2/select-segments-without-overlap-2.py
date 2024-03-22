@@ -5,9 +5,6 @@ lines.sort(key=lambda x: (x[1],x[0]))
 
 dp = [0]*1001
 
-for s, e in lines:
-    if s==0:
-        dp[e] = max(dp[e], 1)
-        continue
-    dp[e] = max(dp[e], dp[s-1] + 1)
+for s, e in lines
+    dp[e] = max(max(dp[:e]), dp[s-1] + 1)
 print(max(dp))
