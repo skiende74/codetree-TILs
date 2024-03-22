@@ -12,5 +12,6 @@ for i in range(N):
         s_i, _ = lines[i]
         _, e_j = lines[j]
 
-        dp[i] = max(dp[i], dp[j] + 1)
+        if e_j < s_i:
+            dp[i] = max(dp[i], dp[j] + 1)
 print(max(dp))
