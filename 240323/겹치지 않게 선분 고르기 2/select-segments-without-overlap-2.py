@@ -1,7 +1,7 @@
 N = int(input())
 
 lines = [list(map(int,input().split())) for _ in range(N)]
-lines.sort()
+lines.sort(key=lambda x: (x[1]))
 
 dp = [0]*1001
 
