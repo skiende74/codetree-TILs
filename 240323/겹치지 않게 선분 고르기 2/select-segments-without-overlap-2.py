@@ -1,11 +1,16 @@
 N = int(input())
 
 lines = [list(map(int,input().split())) for _ in range(N)]
-lines.sort()
+lines.sort(key=lambda x: (x[1],x[0]))
 
 dp = [0]*1001
 
-for s, e in lines:
-    dp[e] = max(dp[:e+1])
-    dp[e] = max(dp[e], dp[s-1] + 1)
+for i in range(N):
+    dp[i] = 1
+
+    for j in range(i):
+        s_i, _ = lines[i]
+        _, e_j = lines[j]
+
+        dp[i] = max(dp[ei, dp[j] + 1)
 print(max(dp))
