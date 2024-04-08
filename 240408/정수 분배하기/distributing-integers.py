@@ -5,8 +5,8 @@ def f(k):
     return sum(map(lambda x: x//k, seq))
 
 def custom_bound(f, goal):
-    left, right = 1, max(seq)
-    max_idx = -1
+    left, right = 0, min(seq)
+    max_idx = left
 
     while left <= right:
         mid = (left+right)//2
