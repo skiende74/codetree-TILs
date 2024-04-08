@@ -4,7 +4,7 @@ def num2k(num):
     result = 0
 
     for k in range(1,n+1):
-        result += num//k
+        result += min(n,num//k)
     return result
 
 def lower_bound(f, goal):
