@@ -9,6 +9,7 @@ def binary(goal):
         if mid == goal: return count 
         if mid<goal: left = mid+1
         else: right = mid-1
+    return count
 
 numbers = list(range(*map(int,input().split())))
 counted = list(map(binary, numbers))
