@@ -5,7 +5,7 @@ def f(k):
     return sum(map(lambda x: x//k, seq))
 
 def custom_bound(f, goal):
-    left, right = 1, min(seq)
+    left, right = 1, max(seq)
     max_idx = -1
 
     while left <= right:
