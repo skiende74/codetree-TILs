@@ -1,5 +1,6 @@
 N, M = map(int, input().split())
 seq = [int(input()) for _ in range(N)]
+seq.sort()
 
 def f(k):
     return sum(map(lambda x: x//k, seq))
