@@ -15,8 +15,8 @@ while PQ:
     d, i = heappop(PQ)
 
     for j, w in graph[i]:
-        if dist[j] > dist[i]+d:
-            dist[j] = dist[i]+d
+        if dist[j] > dist[i]+w:
+            dist[j] = dist[i]+w
             heappush(PQ, (dist[j], j))
 
 print(max(dist[1:]))
