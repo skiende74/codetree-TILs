@@ -32,5 +32,5 @@ ans = [end]
 while j != start:
     j = path[j]
     ans.append(j)
-print(len(ans)-1)
+print(dist[end])
 print(*ans[::-1])
