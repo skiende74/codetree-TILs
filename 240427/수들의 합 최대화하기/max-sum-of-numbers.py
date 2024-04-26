@@ -15,7 +15,7 @@ def dfs(i):
         if j in visited: continue
         visited.add(j)
         answers.append(grid[i][j])
-        dfs(j)
+        dfs(i+1)
         answers.pop()
         visited.remove(j)
 
