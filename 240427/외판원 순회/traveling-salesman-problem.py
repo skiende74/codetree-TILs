@@ -10,6 +10,7 @@ def dfs(i):
         return
     for j in range(1,N+1):
         if visited[j]: continue
+        if grid[i][j] == 0: continue
         visited[j] = True
         answer += grid[i][j]
         cnt += 1
