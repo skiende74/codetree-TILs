@@ -11,8 +11,10 @@ def dfs(i):
             answers.pop()
             visited[j] = False
 
+visited = [False]*(N+1)
 for i in range(1,N+1):
-    visited = [False]*(N+1)
     visited[i] = True
     answers = [i]
-    dfs(i)
+    dfs(0)
+    answers.pop()
+    visited[i] = False
