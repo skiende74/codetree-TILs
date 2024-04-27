@@ -18,4 +18,4 @@ for k in range(1,V+1):
 ans = INF
 for i in range(1,V+1):
     ans=min(ans,grid[s1][i]+grid[s2][i]+grid[i][e])
-print(ans)
+print(ans if ans!=INF else -1)
