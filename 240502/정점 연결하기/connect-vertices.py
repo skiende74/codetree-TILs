@@ -13,4 +13,6 @@ parent = [i for i in range(N+1)]
 for _ in range(N-2):
     i, j = map(int,input().split())
     union(i,j)
-print(*set(parent[1:3]))
+for i in range(1,N+1):
+    find(i)
+print(*set(parent[1:]))
