@@ -1,9 +1,17 @@
 from collections import Counter
 N, Q = map(int,input().split())
 parent = [i for i in range(N+1)]
+counter = [1]*(N+1)
 def union(i,j):
     r1,r2 = find(i), find(j)
-    parent[r1] = r2
+    if r1<=r2:
+        parent[r2] = r1
+        counter[r1] += counter[r2]
+    else:
+        parent[r1] = r2
+        counter[r2] += counter[r1]
+    parent[r2] = min(r1,r2)
+    parent[r1] = min(r1, r2)
 def find(i):
     if parent[i] == i: return i
     parent[i] = find(parent[i])
@@ -16,9 +24,4 @@ for _ in range(Q):
         i, j = map(int,query[1:])
         union(i,j)
     else:
-        search.append(int(query[1]))
-for i in range(1,N+1):
-    find(i)
-counter = Counter(parent)
-for s in search:
-    print(counter[parent[s]])
+        print(counter[find(int(query[1]))])
