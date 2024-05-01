@@ -4,7 +4,8 @@ parent = [i for i in range(N+1)]
 counter = [1]*(N+1)
 def union(i,j):
     r1,r2 = find(i), find(j)
-    if r1<=r2:
+    if r1==r2: return
+    if r1<r2:
         parent[r2] = r1
         counter[r1] += counter[r2]
     else:
