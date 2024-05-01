@@ -10,8 +10,6 @@ def union(i,j):
     else:
         parent[r1] = r2
         counter[r2] += counter[r1]
-    parent[r2] = min(r1,r2)
-    parent[r1] = min(r1, r2)
 def find(i):
     if parent[i] == i: return i
     parent[i] = find(parent[i])
