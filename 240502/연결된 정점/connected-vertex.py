@@ -24,4 +24,5 @@ for _ in range(Q):
         i, j = map(int,query[1:])
         union(i,j)
     else:
-        print(counter[find(int(query[1]))])
+        a = int(query[1])
+        print(counter[find(a)])
