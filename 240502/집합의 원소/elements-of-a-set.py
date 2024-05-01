@@ -5,7 +5,7 @@ def union(i,j):
     parent[r2] = r
 def find(i):
     if parent[i] == i: return i
-    parent[i] = find(i)
+    parent[i] = find(parent[i])
     return parent[i]
 
 N, M = map(int,input().split())
