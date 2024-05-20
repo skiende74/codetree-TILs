@@ -6,12 +6,13 @@ def add(x):
     res = (1 << x) | res
 def delete(x): 
     global res
-    res = -1 ^ (1 << x) & res
+    if res >> x & 1 == 1:
+        res ^= (1 << x)
 def print_(x):
     print(1 if (1 << x) & res else 0)
 def toggle(x): 
     global res
-    res = (1 << x) ^ res
+    res ^= (1 << x)
 def clear(): 
     global res
     res = 0
