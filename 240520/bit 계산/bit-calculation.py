@@ -12,7 +12,9 @@ def print_(x):
 def toggle(x): 
     global res
     res = (1 << x) ^ res
-def clear(): res = 0
+def clear(): 
+    global res
+    res = 0
 for _ in range(N):
     op, *num = input().split()
     if num: num = int(num[0])
