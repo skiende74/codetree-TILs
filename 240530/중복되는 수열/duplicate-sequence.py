@@ -3,11 +3,12 @@ words = [input() for _ in range(N)]
 
 cnt = 0
 class TrieNode():
-    global cnt
+
     def __init__(self):
         self.is_end = False
         self.children = [None]*10
     def insert_word(self, s):
+        global cnt
         t = self
         for char in s:
             index = int(char)
