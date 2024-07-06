@@ -5,8 +5,8 @@ for _ in range(N):
     
     if n: n = int(n[0])
     
-    if op == 'add' and num & (1 << n) == 0:
-        num ^= 1 << n
+    if op == 'add':
+        num |= 1 << n
     elif op == 'delete' and num & (1 << n) == 1:
         num ^= 1 << n
     elif op == 'print':
