@@ -7,8 +7,8 @@ for _ in range(N):
     
     if op == 'add':
         num |= 1 << n
-    elif op == 'delete' and num & 1 << n:
-        num ^= (1 << n)
+    elif op == 'delete' and num & (1 << n):
+        num ^= 1 << n
     elif op == 'print':
         print( 1 if num & (1 << n) else 0)
     elif op == 'toggle':
