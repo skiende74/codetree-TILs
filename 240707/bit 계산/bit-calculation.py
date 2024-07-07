@@ -13,5 +13,5 @@ for _ in range(N):
         print( 1 if num & (1 << n) else 0)
     elif op == 'toggle':
         num ^= 1 << n
-    elif op == 'clear':
+    else:
         num = 0
