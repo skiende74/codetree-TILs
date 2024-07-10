@@ -3,7 +3,7 @@ sys.setrecursionlimit(2*10**5)
 input = sys.stdin.readline
 def dfs(i):
     if dp[i] != INF: return dp[i]
-    dp[i] = sum([dfs(j) for j in graph[i]]) + seq[i]
+    dp[i] = sum([dfs(j) for j in graph[i] if dfs(j)>0]) + seq[i]
     return dp[i]
 
 N = int(input())
